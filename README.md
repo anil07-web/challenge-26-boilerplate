@@ -1,4 +1,4 @@
-## Boilerplate Repository - Challenge-26
+## Boilerplate Repository - Challenge-26 - IC Gramin Bank - Task 1
 
 ### Instructions
 Refer the [PROBLEM.md](./PROBLEM.md) file for problem description.
