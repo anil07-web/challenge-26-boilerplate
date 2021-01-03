@@ -55,7 +55,7 @@ class customer_details{
           System.out.println("Name: "+firstname[i]+" "+lastname[i]);
           System.out.println("Age: "+age[i]);
           System.out.println("Address: "+address[i]);
-          System.out.println("Phone no. "+phno[i]);
+          System.out.println("Phone no.  +91"+phno[i]);
           System.out.println("Aadhaar id: "+aadhaar[i]);
          }
         }
