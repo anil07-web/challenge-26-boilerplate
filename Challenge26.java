@@ -3,14 +3,14 @@ class Customer{
    private String firstname;
    private String lastname;
    private int age;
-   private String aadhaar;
+   private long aadhaar;
    private String address;
    private long phno;
    private  static int id=0;
    private int customerid;
    private String village;
    Scanner sc = new Scanner(System.in);
-   public Customer(String fname,String lname,int age,String aadhaar,String address,long phno,String vill ){
+   public Customer(String fname,String lname,int age,long aadhaar,String address,long phno,String vill ){
      id++;
      this.customerid=id;
      this.firstname=fname;
@@ -30,7 +30,7 @@ class Customer{
    public int getage(){
     return age;
    }
-   public String getaadhar(){
+   public long getaadhar(){
     return aadhaar;
    }
    public String getaddress(){
@@ -51,7 +51,7 @@ class Customer{
   return 1+count(n/10);
   }
  
-  public void byLastName(String entlast,int id,String fname,String lname,int age,String aadhaar,String address,long phno,String vill ) {
+  public void byLastName(String entlast,int id,String fname,String lname,int age,long aadhaar,String address,long phno,String vill ) {
   if(entlast.equalsIgnoreCase(lname))
   {
    System.out.println();   
@@ -65,7 +65,7 @@ class Customer{
    System.out.println("village : "+village);
   }
   }
-  public void byVillageName(String myvillage,int id,String fname,String lname,int age,String aadhaar,String address,long phno,String vill ) {
+  public void byVillageName(String myvillage,int id,String fname,String lname,int age,long aadhaar,String address,long phno,String vill ) {
   if(myvillage.equalsIgnoreCase(vill))
   {           
    System.out.println(+id+"                "+fname+" "+lname);
@@ -87,11 +87,20 @@ class Challenge26{
         String b=obj.next();
         System.out.println("Enter the Age of customer");
         int c=obj.nextInt();
-        System.out.println("Enter the Aadhaar id of customer");
-        String d=obj.next();
         System.out.println("Enter the Address of customer");
         String e=obj1.nextLine();
         int k=0;
+        long d;
+        do{ 
+          System.out.println("Enter the Aadhaar id of customer");
+           d=obj.nextLong();   
+          if(Customer.count(d)==12)
+           k=0;
+          else{
+          System.out.println("Please enter 12 digits Aadhaar only\n");
+          k=1;
+          }
+          }while(k==1);
         do{ 
         System.out.println("Enter the Phone number of customer");
         long f=obj.nextLong();   
